@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tính lãi</title>
+</head>
+<body>
+		<script>
+				let tienvay = parseFloat(prompt("Nhập số tiền gửi ban đầu :"));
+				let thang = parseInt(prompt("Nhập số tháng đã gửi :"));
+				let laisuat = parseFloat(prompt("Nhập lãi suất 1 tháng :"));
+				let tienlai = tienvay*Math.pow(1+(laisuat/100), thang);
+				alert("Tiền có đc sau " +thang +" tháng là: "+tienlai);
+			
+		</script>
+</body>
+</html>

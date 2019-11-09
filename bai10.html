@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giá điện</title>
+</head>
+
+<body>
+    <!-- giá tiền điện theo số điện tiêu thụ (kWh):
+    50 số đầu : 1678 đ/số.
+    50 số tiếp theo : 1734 đ/số. 
+    lớn hơn : 2019 đ/số -->
+
+    <script>
+
+        let sodien = parseFloat(prompt("Nhập số điện sử dụng (kWh) :"));
+        let tiendien;
+        if (sodien <= 50) {
+            tiendien = sodien * 1678;
+        } else if (sodien <= 100) {
+            tiendien = 50 * 1678 + (sodien - 50) * 1734;
+        }
+        else {
+            tiendien = 50 * 1678 + 50 * 1734 + (sodien - 100) * 2014;
+        }
+        alert("Số tiền điện: " + tiendien);
+
+    </script>
+
+</body>
+
+</html>

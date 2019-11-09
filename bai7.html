@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>giải pt bậc 2</title>
+</head>
+
+<body>
+    <!-- phương trình có dạng: ax^2 + bx + c = 0 -->
+    <script>
+        let a=parseFloat(prompt('nhập hệ số a : '));
+        let b=parseFloat(prompt('nhập hệ số b : '));
+        let c=parseFloat(prompt('nhập hệ số c : '));
+        let delta= b*b -4*a*c;
+        let x= -b/(2*a);
+        let x1= (-b+Math.sqrt(delta))/(2*a);
+        let x2= (-b - Math.sqrt(delta))/(2*a);
+        if (a !=0){
+            if(delta < 0){
+                document.write('phương trình vô nghiệm.');
+            }else if(delta==0){
+                document.write('phương trình có nghiệm kép : x1=x2 = ' + x )
+            }else {
+                document.write('phương trình có hai nghiệm: x1=' +x1+' ;x2= ' + x2)
+            }
+        }else {
+         alert('không phải là phương trình bậc 2!')   
+        }
+    </script>
+</body>
+
+</html>

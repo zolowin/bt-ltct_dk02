@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tính thuế thu nhập</title>
+</head>
+
+<body>
+    <!-- - 5 triệu đồng/tháng 0%;
+ - Trên 5 - 7 triệu đồng/tháng: 5%;
+ - Trên 7- 9 triệu đồng: 10%;
+ -Trên 9 - 14 triệu đồng/tháng: 15%;
+ -Trên 14 - 24 triệu đồng/tháng: 20%;
+ -Trên 24 - 44 triệu đồng/tháng: 25%;
+ -Trên 44 - 84 triệu đồng/tháng: 30%;
+ -Trên 84 triệu đồng: 35%. -->
+
+    <script>
+        let luong = parseFloat(prompt("Nhập lương (triệu đồng)"));
+        let thue;
+
+        if (luong <= 5) {
+            thue = 0;
+        } else if (luong < 7) {
+            thue = luong * 5 / 100;
+        }
+        else if (luong < 9) {
+            thue = luong * 10 / 100;
+        }
+        else if (luong < 14) {
+            thue = luong * 15 / 100;
+        }
+        else if (luong < 24) {
+            thue = luong * 20 / 100;
+        }
+        else if (luong < 44) {
+            thue = luong * 25 / 100;
+        }
+        else if (luong < 84) {
+            thue = luong * 30 / 100;
+        }
+        else {
+            thue = luong * 35 / 100;
+        }
+        alert("Thuế thu nhập cá nhân là : " + thue);
+
+    </script>
+</body>
+
+</html>
